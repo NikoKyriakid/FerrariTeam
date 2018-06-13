@@ -2,6 +2,9 @@
 h2 {
 	text-align: center;
     font-size: 22pt;
+    font-family: 'Courier';
+    font-style: italic;
+     text-shadow: 2px 2px lightgrey;
 }
 
 ul {
@@ -11,7 +14,7 @@ ul {
 #back {
 	position: absolute;
     right: 0;
-    top: 26px;
+    top: 90px;
     color: blue;
     font-size: larger;
     border: 1px solid blue;
@@ -41,5 +44,10 @@ ul {
 
 .names li:hover {
 	color: lightblue;
+	transition: color 0.2s ease-in;
 
+}
+
+.header {
+	
 }
