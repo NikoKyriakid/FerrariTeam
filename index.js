@@ -10,7 +10,7 @@ db.on("error", function(error) {
 }); 
 
 
-app.get('/', function(req, res){
+app.get('/users', function(req, res){
 
     let sql = 'SELECT * from user_info';
     let people = [];
