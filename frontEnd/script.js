@@ -1,10 +1,8 @@
 
 
 
-
 $.ajax({
-  url: "localhost://3000",
-  data: data
+  url: "http://localhost:3000/users"
 }).done(function(res) {
 	renderNames(res);
 });
@@ -12,29 +10,42 @@ $.ajax({
 function renderNames(listOfPeople) {
 	var html = '';
 	for (var i = listOfPeople.length - 1; i >= 0; i--) {
-		html += makePerson(listOfPeople[i]);
+		html += makePerson(listOfPeople[i].id, listOfPeople[i].firstName, listOfPeople[i].lastName);
 	}
 
 	$('.names').append(html);
+
+	attachHandlers();
 }
 
 
-function makePerson(id, name) {
-	return "<li id='" + id + "'>" + name + "</li>";
+function makePerson(id, firstName, lastName) {
+	var fName = firstName + ' ' + lastName;
+	return "<li id='" + id + "'>" + fName + "</li>";
 }
 
 function attachHandlers() {
+
+
+	$('#back').on('click', function() {
+		$('.details').hide();
+		$('.names').show();
+		$('#back').hide();
+
+	});
+
 	$('.names li').on('click', function() {
 
-		var id = $(this).id;
+		var id = $($(this)[0]).attr('id');
 
 		$.ajax({
-			url: "localhost:3000/user/" + id,
+			url: "http://localhost:3000/user/" + id,
 		}).done(function(res) {
 			if (res == null) return null;
 
 			$('.names').hide();
-			renderDetails();
+			$('#back').show();
+			renderDetails(res);
 		});
 	})
 }

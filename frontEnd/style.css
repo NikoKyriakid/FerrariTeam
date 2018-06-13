@@ -1,0 +1,16 @@
+ul {
+  list-style-type: none;
+}
+
+#back {
+	position: absolute;
+    right: 0;
+    top: 26px;
+    color: blue;
+    font-size: larger;
+    border: 1px solid blue;
+    border-radius: 3px;
+    padding: 3px;
+    cursor: pointer;
+    display: none;
+}
