@@ -22,6 +22,7 @@ app.get('/', function(req, res){
         }
         rows.forEach(row => {
             people.push({
+                id: row.id,
                 firstName: row.firstName,
                 lastName: row.lastName,
                 nationality: row.nationality,
@@ -29,6 +30,7 @@ app.get('/', function(req, res){
             });
 
             console.log(JSON.stringify({
+                id: row.id,
                 firstName: row.firstName,
                 lastName: row.lastName,
                 nationality: row.nationality,

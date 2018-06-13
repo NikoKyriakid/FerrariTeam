@@ -1,6 +1,7 @@
 
 [
 	{
+		id:	1,
 		firstName: "Niko",
 		lastName: "Kyriakidis",
 		nationality: "Greek",
@@ -8,6 +9,7 @@
 	},
 
 	{
+		id: 2,
 		firstName: "Ola",
 		lastName: "Abolarinwa",
 		nationality: "Nigerian",
@@ -15,6 +17,7 @@
 	},
 
 	{
+		id: 3,
 		firstName: "Tom",
 		lastName: "Biddulph",
 		nationality: "Greek",
