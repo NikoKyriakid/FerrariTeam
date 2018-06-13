@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/NikoKyriakid/FerrariTeam/issues"
   },
-  "homepage": "https://github.com/NikoKyriakid/FerrariTeam#readme"
+  "homepage": "https://github.com/NikoKyriakid/FerrariTeam#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
