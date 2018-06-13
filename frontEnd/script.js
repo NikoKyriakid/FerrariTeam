@@ -59,14 +59,14 @@ function renderDetails(person) {
 
 function makeDetails(firstName, lastName, nationality, age) {
 	return ['<div class="details">',
-				'<label>First Name:</label>',
-				'<span>' + firstName + '</span>',
-				'<label>Last Name:</label>',
-				'<span>' + lastName + '</span>',
-				'<label>Nationality:</label>',
-				'<span>' + nationality + '</span>',
-				'<label>Age:</label>',
-				'<span>' + age + '</span>',
+				'<p><label>First Name:</label>',
+				'<span>' + firstName + '</span></p>',
+				'<p><label>Last Name:</label>',
+				'<span>' + lastName + '</span></p>',
+				'<p><label>Nationality:</label>',
+				'<span>' + nationality + '</span></p>',
+				'<p><label>Age:</label>',
+				'<span>' + age + '</span></p>',
 			'</div>'].join('');
 }
 
