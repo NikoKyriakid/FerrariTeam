@@ -10,6 +10,12 @@ db.on("error", function(error) {
 }); 
 
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
 app.get('/users', function(req, res){
 
     let sql = 'SELECT * from user_info';
