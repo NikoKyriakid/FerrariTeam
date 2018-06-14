@@ -1,0 +1,27 @@
+version: '3'
+services:
+  ferrari: 
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3000:3000
+    networks: 
+      - ferrari
+    depends_on:
+      - ferrari-db
+    command: ['sh', '-c', 'npm run dev']
+  
+  ferrari-db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD="password"
+      - MYSQL_DATABASE="ferrariteam"
+      - MYSQL_USER="ferrari"
+      - MYSQL_PASSWORD="team"
+    networks: 
+      - ferrari
+
+networks: 
+  ferrari:
+  

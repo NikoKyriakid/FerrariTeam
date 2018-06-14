@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM node:8-alpine
 
 #create app directory
 WORKDIR /usr/src/app
@@ -9,7 +9,10 @@ COPY package*.json ./
 
 RUN npm install --only=production
 
-COPY . .
+# Bundle app source
+COPY db ./db
+COPY frontEnd ./frontEnd
+COPY index.js ./
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
