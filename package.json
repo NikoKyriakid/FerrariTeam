@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,10 @@
   "homepage": "https://github.com/NikoKyriakid/FerrariTeam#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "mysql": "^2.15.0",
     "sqlite3": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
   }
 }
